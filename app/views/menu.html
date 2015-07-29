@@ -1,0 +1,10 @@
+<div class="nav-wrapper" ng-controller="MenuCtrl">
+    <a href="#!" class="brand-logo">Logo</a>
+    <a href="#" data-activates="mobile-demo" class="button-collapse" sidenav><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+        <li ng-repeat="item in menuItems" ng-class="{ active:isActive('/{{item.className}}')}"><a ui-sref="{{item.link}}" class="waves-effect waves-light">{{item.title}}</a></li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+        <li ng-repeat="item in menuItems"><a ui-sref="{{item.link}} ng-class=" { active:isActive( '/{{item.className}}')} "" class="waves-effect waves-light">{{item.title}}</a></li>
+    </ul>
+</div>
